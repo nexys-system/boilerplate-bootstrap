@@ -1,0 +1,11 @@
+{
+  "imports": {
+    "@nexys/headless/dist/components/index": "./@nexys/headless/dist/components/index.js",
+    "@nexys/headless/dist/layout": "./@nexys/headless/dist/layout.js",
+    "@nexys/headless/dist/list/list-super": "./@nexys/headless/dist/list/list-super.js",
+    "@nexys/headless/dist/list/utils/pagination-utils": "./@nexys/headless/dist/list/utils/pagination-utils.js",
+    "react": "./react.js",
+    "react-dom": "./react-dom.js",
+    "react-router-dom": "./react-router-dom.js"
+  }
+}
