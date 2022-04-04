@@ -1,5 +1,5 @@
 export const links = {
-  home: {name: "Home", link: "/app"}
+  home: {name: "Home", link: "/"}
 };
 export const publicLinks = {};
 export const menus = Object.values(links);

@@ -4,6 +4,7 @@
     "@nexys/headless/dist/layout": "./@nexys/headless/dist/layout.js",
     "@nexys/headless/dist/list/list-super": "./@nexys/headless/dist/list/list-super.js",
     "@nexys/headless/dist/list/utils/pagination-utils": "./@nexys/headless/dist/list/utils/pagination-utils.js",
+    "@nexys/headless/dist/tabs": "./@nexys/headless/dist/tabs.js",
     "react": "./react.js",
     "react-dom": "./react-dom.js",
     "react-router-dom": "./react-router-dom.js"
