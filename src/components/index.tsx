@@ -1,6 +1,7 @@
 import React from "react";
 
 import { LoadDataAsync as LoadComponentAsyncGeneric } from "@nexys/headless/dist/components/index";
+import TabsGeneric, { TabProps } from "@nexys/headless/dist/tabs";
 
 export const Spinner = ({ color }: { color?: "primary" | "secondary" }) => (
   <div
@@ -48,3 +49,29 @@ export const Pill = ({ children, color = "primary" }: NotificationProps) => (
 );
 
 export const LoadDataAsync = LoadComponentAsyncGeneric(() => <Spinner />);
+
+const Ul = ({ children }: { children: JSX.Element[] }) => (
+  <ul className="nav nav-tabs">{children}</ul>
+);
+
+const Li = ({
+  label,
+  onClick,
+  isSelected,
+}: {
+  label: string;
+  isSelected: boolean;
+  onClick: () => void;
+}) => (
+  <li onClick={onClick} className="nav-item">
+    <a
+      className={"nav-link " + (isSelected === true ? "active" : "")}
+      aria-current="page"
+      href="#"
+    >
+      {label}
+    </a>
+  </li>
+);
+
+export const Tabs = TabsGeneric(Ul, Li);
