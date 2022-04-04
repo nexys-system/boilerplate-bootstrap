@@ -1,5 +1,5 @@
 import React from "react";
-
+import { InputProps } from "@nexys/headless/dist/form/type";
 export const getClassName = (errors?: string[]): string => {
   const isInvalid: boolean = !!errors;
 
@@ -11,13 +11,6 @@ export const getClassName = (errors?: string[]): string => {
 
   return classes.join(" ");
 };
-
-interface InputGenericProp<A> {
-  value?: A;
-  onChange: (v: A) => void;
-  errors?: string[];
-  disabled?: boolean;
-}
 
 export const InputWrapper = ({
   label,
@@ -46,7 +39,7 @@ export const Input = ({
   errors,
   disabled,
   value,
-}: InputGenericProp<string>) => (
+}: InputProps<string>) => (
   <input
     className={getClassName(errors)}
     type={"text"}
@@ -61,7 +54,7 @@ export const Textarea = ({
   errors,
   disabled,
   value,
-}: InputGenericProp<string>) => (
+}: InputProps<string>) => (
   <textarea
     className={getClassName(errors)}
     value={value}
@@ -79,7 +72,7 @@ export const SelectEnum = <A extends number | string>({
 }: {
   options: { id: A; name: string }[];
   value?: A;
-} & InputGenericProp<A>) => (
+} & InputProps<A>) => (
   <select
     className={getClassName(errors)}
     // handle select null again
